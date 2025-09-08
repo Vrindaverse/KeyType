@@ -31,7 +31,7 @@ const HeroSection = () => {
         
 <div className="flex gap-6">
   <Link
-    to="/test"
+    to="/play"
     className="px-6 py-3 bg-black text-white rounded-md font-patrick shadow-[4px_4px_0px_rgba(0,0,0,0.25)] transform transition-all duration-200 hover:scale-105 hover:shadow-[5px_5px_0px_rgba(0,0,0,0.25)]"
   >
     Play Now
