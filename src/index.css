@@ -1,0 +1,16 @@
+/* 1. Import fonts first */
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&family=Patrick+Hand&display=swap');
+
+/* 2. Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Custom classes */
+.font-passero {
+  font-family: 'Passero One', cursive;
+}
+.font-patrick {
+  font-family: 'Patrick Hand', cursive;
+}
