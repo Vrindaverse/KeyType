@@ -1,22 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AnimatedRoutes from "./AnimateRoutes";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import Home from "./pages/Home";
-import Play from "./pages/Play"
+import Loader from "./components/Loader";
 
-function App() {
+export default function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="justify-center">
-      <Router>
-        <Navbar />
-      <Routes>
-        <Route path="/" element={<Home /> } />
-        <Route path="/play" element={<Play />} />
-      </Routes>
-      <Footer />
-      </Router>
-    </div>
-  )
+    <Router>
+      {loading && <Loader onFinish={() => setLoading(false)} />}
+      {!loading && (
+        <>
+          <Navbar />
+          <AnimatedRoutes />
+          <Footer />
+        </>
+      )}
+    </Router>
+  );
 }
-
-export default App;
